@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Jan 2026 article</title>
 
   <style>
@@ -10,28 +11,24 @@
       background-color: #ffffff;
     }
 
-    /* Parent container */
     .image-container {
-      position: relative;      /* 🔑 anchor for absolute children */
+      position: relative;
+      width: 100%;
       max-width: 1444px;
       margin: 0 auto;
     }
 
-    /* Main image */
     .image-container img {
       display: block;
-      width: 100%;             /* 🔑 fill container */
+      width: 100%;
       height: auto;
     }
 
-    /* Clickable overlays */
     .link {
       position: absolute;
       display: block;
-      /* background: rgba(138, 43, 226, 0.3); */
     }
 
-    /* Example clickable areas (percent-based) */
     .link-1 {
       top: 82.3%;
       left: 15%;
@@ -45,8 +42,16 @@
       width: 70%;
       height: 0.7%;
     }
+
+    /* Mobile tap improvement */
+    @media (max-width: 768px) {
+      .link {
+        min-height: 44px;
+      }
+    }
   </style>
 </head>
+
 
 <body>
   <div class="image-container">
